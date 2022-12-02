@@ -8,6 +8,7 @@ import (
 	"time"
 
 	"github.com/mike1808/adventofcode2022/one"
+	"github.com/mike1808/adventofcode2022/two"
 )
 
 var dayFlag = flag.String("day", "one", "which day")
@@ -28,6 +29,8 @@ func main() {
 	switch *dayFlag {
 	case one.Day:
 		ans, err = one.Solve(in)
+	case two.Day:
+		ans, err = two.Solve(in)
 	}
 
 	elapsed := time.Now().Sub(start)
